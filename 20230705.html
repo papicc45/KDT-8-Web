@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./20230705.css" />
+    <style>
+      /* p {
+        font-size: 20px;
+        text-align: center;
+        margin: 0;
+        line-height: 200px; 글씨 높이 div태그와 같은 px로 설정 
+      }  
+      */
+
+      /* 일치 선택자 */
+      span.orange {
+        color: red;
+      }
+
+      /* 자식 선택자 */
+      ul > .orange {
+        color: orange;
+        background-color: gray;
+      }
+
+      /* 하위 선택자 */
+      ul .orange {
+        color: orange;
+      }
+
+      /* 인접 형제 선택자  (클래스가 orange인 태그 뒤에 첫번째 li 태그)*/
+      .orange + li {
+        color: yellow;
+        font-size: 30px;
+      }
+
+      /* 일반 형제 선택자 (뒤에 오는 모든 li 태그 선택)*/
+      .orange ~ li {
+        color: green;
+      }
+
+      a:hover {
+        color: red;
+      }
+
+      /* 클릭하고 있는 동안 */
+      a:active {
+        background-color: white;
+        color: aqua;
+      }
+
+      /* 포커스가 되어있을 때 */
+      input:focus {
+        background-color: lightgray;
+      }
+
+      /* 가상 클래스 선택자 (조건에 맞으면 css 적용)*/
+      .fruits span:first-child {
+        color: red;
+      }
+
+      .fruits div:first-child {
+        color: blue;
+      }
+
+      .fruits h3:last-child {
+        background-color: lightblue;
+        text-decoration: line-through;
+      }
+
+      /* 클래스가 fruits인 태그의 하위요소 중 2번쨰 태그에 적용*/
+      .fruits *:nth-child(2) {
+        background-color: brown;
+      }
+      /* 클래스가 fruits인 태그의 하위요소 중 span이 아닌 태그 적용*/
+      .fruits *:not(span) {
+        background-color: blue;
+      }
+
+      /* 가상 요소 선택자 */
+      .fruits::before {
+        content: "과일목록 시작";
+      }
+
+      .fruits::after {
+        content: "뒤";
+      }
+
+      /* 속성 선택자 */
+      input[disabled] {
+        background-color: blue;
+      }
+
+      input[type="password"] {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="background-color: blue">
+      <p>1</p>
+    </div>
+    <div>
+      <p>2</p>
+    </div>
+    <div>
+      <p>3</p>
+    </div>
+    <div>
+      <ul>
+        <li id="apple">사과</li>
+        <li>딸기</li>
+        <li class="orange">
+          오렌지
+          <span class="orange">오렌지2</span>
+        </li>
+        <li>망고</li>
+        <li>포도</li>
+        <p>파인애플</p>
+      </ul>
+      <div>당근</div>
+      <p>토마토</p>
+      <span class="orange">오렌지</span>
+    </div>
+    <a href="https://www.naver.com">네이버</a>
+    <input type="" name="" id="" />
+    <br /><br />
+    <div class="fruits">
+      <span>딸기</span>
+      <span>수박</span>
+      <div>오렌지</div>
+      <p>망고</p>
+      <h3>사과</h3>
+    </div>
+    <div>
+      <input type="text" disabled />
+      <input type="password" name="" id="" />
+    </div>
+  </body>
+</html>
