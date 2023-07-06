@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "KyoboHandwriting2022khn";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KyoboHandwriting2022khn.woff2")
+          format("woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+      p {
+        font-weight: bold;
+        font-size: 20px;
+        /* line-height: 200px; */
+      }
+
+      .google {
+        font-family: "Agdasima", sans-serif;
+        color: rgb(rgb(141, 82, 82), rgb(18, 53, 18), rgb(138, 138, 173));
+      }
+
+      .noon {
+        font-family: "KyoboHandwriting2022khn";
+      }
+
+      div p {
+        text-align: center;
+        line-height: 200px;
+        font-weight: 100;
+        background-color: beige;
+        text-decoration: dotted;
+        color: red;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      /* 인라인 태그에 높낮이 조절 안됨, 인라인 태그 안에 블록태그 사용불가 */
+
+      span {
+        background-color: lightblue;
+        width: 100px; /* 적용안됨 , display inline-block 설정 시 적용*/
+      }
+      h1 {
+        width: 100px;
+        background-color: yellow;
+        display: inline-block; /* 인라인 태그처럼 나열 */
+      }
+      .d-none {
+        /* display: none; */
+        background-color: red;
+      }
+
+      .invisible {
+        /* visibility: hidden; */
+        background-color: orangered;
+      }
+
+      .opacity-0 {
+        /* opacity: 0; */
+        background-color: tomato;
+      }
+
+      .square {
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agdasima&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div>
+      <p>p태그입니다.</p>
+    </div>
+    <p class="google">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam natus et
+      voluptatum rerum! Vel cumque adipisci sunt facere fuga eveniet velit
+      tempora dolorem inventore? Magnam ullam perspiciatis quo vitae sit!
+    </p>
+    <p class="noon">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam natus et
+      voluptatum rerum! Vel cumque adipisci sunt facere fuga eveniet velit
+      tempora dolorem inventore? Magnam ullam perspiciatis quo vitae sit!
+    </p>
+    <a href="https://www.naver.com">네이버</a>
+
+    <br />
+    <span>span</span>
+    <span>span</span>
+    <h1>h1</h1>
+    <h1>h1</h1>
+
+    <!-- padding 테두리와 content 사이 -->
+    <div
+      style="
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        margin-left: 10px;
+      "
+    ></div>
+    <button style="padding: 10px">버튼</button>
+    <div style="width: 30vw; background-color: red"></div>
+
+    <div
+      style="
+        border-top: 2px dashed red;
+        border-bottom: 2px dashed blue;
+        border-width: 10px 5px 5px;
+      "
+    >
+      asd
+    </div>
+
+    <div class="square">original</div>
+    <div class="square d-none">d-none</div>
+    <div class="square invisible">invisible</div>
+    <div class="square opacity-0">opacity-0</div>
+    <div class="square">original</div>
+  </body>
+</html>
