@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 800px;
+        height: 500px;
+        background-color: skyblue;
+      }
+
+      .test1 {
+        background-image: url(https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a);
+        background-repeat: repeat-x;
+        background-position: center;
+      }
+      .test2 {
+        background-image: url(https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a);
+        background-position: left 100px top 30px;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      .test3 {
+        background-image: url(https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a);
+        background-position: right 30px bottom 50px;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container test1"></div>
+    <br />
+    <div class="container test2"></div>
+    <br />
+    <div class="container test3"></div>
+  </body>
+</html>

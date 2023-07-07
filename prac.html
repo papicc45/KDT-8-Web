@@ -6,75 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      @font-face {
-        font-family: "KyoboHandwriting2022khn";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KyoboHandwriting2022khn.woff2")
-          format("woff2");
-        font-weight: normal;
-        font-style: normal;
-      }
-      h3 {
-        background-color: brown;
-        border-radius: 5px;
-        text-align: center;
-        padding: 5px;
-        font-family: "KyoboHandwriting2022khn";
+      .container {
+        width: 500px;
+        height: 500px;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
       }
 
-      textarea:hover {
-        background-color: beige;
+      .item {
+        width: 100px;
+        height: 100px;
       }
 
-      textarea {
-        background-color: burlywood;
-        border-radius: 20px;
-        border: 0;
+      .item1 {
+        background-color: red;
       }
-
-      button {
-        padding: 5px;
-        background-color: green;
-        color: white;
-        border: 1px solid green;
-        border-radius: 3px;
-      }
-
-      input[type="text"] {
-        border: 1px solid orangered;
+      .item2 {
         background-color: orange;
-        margin-bottom: 2px;
       }
-
-      input[type="email"] {
-        border: 1px solid blue;
-        background-color: skyblue;
+      .item3 {
+        background-color: yellow;
+      }
+      .item4 {
+        background-color: green;
+      }
+      .item5 {
+        background-color: blue;
+      }
+      .item6 {
+        background-color: navy;
+      }
+      .item7 {
+        background-color: purple;
+      }
+      .item8 {
+        background-color: aqua;
       }
     </style>
   </head>
   <body>
-    <h3>설문조사</h3>
-    이름 <input type="text" />
-    <br />
-    이메일
-    <input type="email" placeholder="qwer1234@naver.com" /> <br /><br />
-
-    <h3>나이</h3>
-    <div class="age">
-      <input type="radio" name="" id="" />10대
-      <input type="radio" name="" id="" />20대
-      <input type="radio" name="" id="" />30대
-      <input type="radio" name="" id="" />40대
-      <input type="radio" name="" id="" />50대
-      <input type="radio" name="" id="" />60대 이상
+    <div class="container">
+      <div class="item item1"></div>
+      <div class="item item2"></div>
+      <div class="item item3"></div>
+      <div class="item item4"></div>
+      <div class="item item5"></div>
+      <div class="item item6"></div>
+      <div class="item item7"></div>
+      <div class="item item8"></div>
     </div>
-
-    <br /><br />
-    <h3>원하는 강의(복수응답 가능합니다.)</h3>
-    <input type="checkbox" name="" id="" />html
-    <input type="checkbox" name="" id="" />css
-    <input type="checkbox" name="" id="" />javascript <br /><br />
-
-    <textarea name="" id="" cols="60" rows="10"></textarea>
-    <button>제줄</button>
   </body>
 </html>
