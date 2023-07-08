@@ -6,57 +6,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .container {
-        width: 500px;
+      .back {
+        width: 800px;
         height: 500px;
-        background-color: black;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
+        top: 50px;
+        left: 50px;
+        background-color: rgb(36, 18, 114);
+        animation: back 10s linear infinite;
       }
 
-      .item {
+      .city {
+        position: absolute;
+        top: 200px;
+        left: 200px;
+        width: 450px;
+        height: 250px;
+      }
+
+      .moon {
+        position: absolute;
+        top: 50px;
+        left: 150px;
+        width: 70px;
+        height: 70px;
+        animation: moon 10s linear infinite;
+      }
+
+      .cloud1 {
+        position: absolute;
+        top: 150px;
+        left: 230px;
         width: 100px;
-        height: 100px;
+        height: 50px;
+        opacity: 0;
+        animation: cloud1 10s linear infinite;
       }
 
-      .item1 {
-        background-color: red;
+      .cloud2 {
+        position: absolute;
+        top: 150px;
+        left: 230px;
+        width: 70px;
+        height: 35px;
+        opacity: 0.3;
+        animation: cloud2 10s linear infinite;
       }
-      .item2 {
-        background-color: orange;
+
+      .sun {
+        position: absolute;
+        top: 50px;
+        left: 150px;
+        width: 70px;
+        height: 70px;
+        opacity: 0;
+        animation: sun 10s linear infinite;
       }
-      .item3 {
-        background-color: yellow;
+
+      @keyframes back {
+        0% {
+          background-color: rgb(36, 18, 114);
+        }
+        33% {
+          background-color: skyblue;
+        }
+        66% {
+          background-color: rgb(243, 85, 74);
+        }
+        100% {
+          background-color: rgb(36, 18, 114);
+        }
       }
-      .item4 {
-        background-color: green;
+
+      @keyframes moon {
+        0% {
+          opacity: 1;
+          transform: rotate(0deg);
+        }
+        50% {
+          opacity: 0;
+          transform: rotate(180deg);
+        }
+        100% {
+          opacity: 1;
+          transform: rotate(360deg);
+        }
       }
-      .item5 {
-        background-color: blue;
+
+      @keyframes sun {
+        0% {
+          opacity: 0;
+          transform: rotate(0deg);
+        }
+        50% {
+          opacity: 1;
+          transform: rotate(180deg);
+        }
+        100% {
+          opacity: 0;
+          transform: rotate(360deg);
+        }
       }
-      .item6 {
-        background-color: navy;
+
+      @keyframes cloud1 {
+        0% {
+          opacity: 0;
+          top: 150px;
+          left: 230px;
+        }
+        50% {
+          opacity: 1;
+          top: 150px;
+          left: 430px;
+        }
+        100% {
+          opacity: 0;
+          top: 150px;
+          left: 230px;
+        }
       }
-      .item7 {
-        background-color: purple;
-      }
-      .item8 {
-        background-color: aqua;
+
+      @keyframes cloud2 {
+        0% {
+          top: 150px;
+          left: 230px;
+        }
+        25% {
+          top: 150px;
+          left: 730px;
+        }
+        50% {
+          top: 150px;
+          left: 230px;
+        }
+        75% {
+          top: 150px;
+          left: 730px;
+        }
+        100% {
+          top: 150px;
+          left: 230px;
+        }
       }
     </style>
   </head>
+
   <body>
-    <div class="container">
-      <div class="item item1"></div>
-      <div class="item item2"></div>
-      <div class="item item3"></div>
-      <div class="item item4"></div>
-      <div class="item item5"></div>
-      <div class="item item6"></div>
-      <div class="item item7"></div>
-      <div class="item item8"></div>
-    </div>
+    <div class="back"></div>
+    <img src="./city.png" alt="" class="city" />
+    <img src="./moon.png" alt="" class="moon" />
+    <img src="./cloud.png" alt="" class="cloud1" />
+    <img src="./cloud.png" alt="" class="cloud2" />
+    <img src="./sun.png" alt="" class="sun" />
   </body>
 </html>
