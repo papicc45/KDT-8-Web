@@ -5,157 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      .back {
-        width: 800px;
-        height: 500px;
-        top: 50px;
-        left: 50px;
-        background-color: rgb(36, 18, 114);
-        animation: back 10s linear infinite;
-      }
-
-      .city {
-        position: absolute;
-        top: 200px;
-        left: 200px;
-        width: 450px;
-        height: 250px;
-      }
-
-      .moon {
-        position: absolute;
-        top: 50px;
-        left: 150px;
-        width: 70px;
-        height: 70px;
-        animation: moon 10s linear infinite;
-      }
-
-      .cloud1 {
-        position: absolute;
-        top: 150px;
-        left: 230px;
-        width: 100px;
-        height: 50px;
-        opacity: 0;
-        animation: cloud1 10s linear infinite;
-      }
-
-      .cloud2 {
-        position: absolute;
-        top: 150px;
-        left: 230px;
-        width: 70px;
-        height: 35px;
-        opacity: 0.3;
-        animation: cloud2 10s linear infinite;
-      }
-
-      .sun {
-        position: absolute;
-        top: 50px;
-        left: 150px;
-        width: 70px;
-        height: 70px;
-        opacity: 0;
-        animation: sun 10s linear infinite;
-      }
-
-      @keyframes back {
-        0% {
-          background-color: rgb(36, 18, 114);
+    <script>
+      let sum = 0;
+      for (let i = 0; i < 100; i++) {
+        if (i % 2 == 0) {
+          sum += i;
+          continue;
         }
-        33% {
-          background-color: skyblue;
-        }
-        66% {
-          background-color: rgb(243, 85, 74);
-        }
-        100% {
-          background-color: rgb(36, 18, 114);
+
+        if (i % 3 == 0) {
+          sum += i;
+          continue;
         }
       }
 
-      @keyframes moon {
-        0% {
-          opacity: 1;
-          transform: rotate(0deg);
-        }
-        50% {
-          opacity: 0;
-          transform: rotate(180deg);
-        }
-        100% {
-          opacity: 1;
-          transform: rotate(360deg);
-        }
-      }
-
-      @keyframes sun {
-        0% {
-          opacity: 0;
-          transform: rotate(0deg);
-        }
-        50% {
-          opacity: 1;
-          transform: rotate(180deg);
-        }
-        100% {
-          opacity: 0;
-          transform: rotate(360deg);
-        }
-      }
-
-      @keyframes cloud1 {
-        0% {
-          opacity: 0;
-          top: 150px;
-          left: 230px;
-        }
-        50% {
-          opacity: 1;
-          top: 150px;
-          left: 430px;
-        }
-        100% {
-          opacity: 0;
-          top: 150px;
-          left: 230px;
-        }
-      }
-
-      @keyframes cloud2 {
-        0% {
-          top: 150px;
-          left: 230px;
-        }
-        25% {
-          top: 150px;
-          left: 730px;
-        }
-        50% {
-          top: 150px;
-          left: 230px;
-        }
-        75% {
-          top: 150px;
-          left: 730px;
-        }
-        100% {
-          top: 150px;
-          left: 230px;
-        }
-      }
-    </style>
+      console.log(sum);
+    </script>
   </head>
 
-  <body>
-    <div class="back"></div>
-    <img src="./city.png" alt="" class="city" />
-    <img src="./moon.png" alt="" class="moon" />
-    <img src="./cloud.png" alt="" class="cloud1" />
-    <img src="./cloud.png" alt="" class="cloud2" />
-    <img src="./sun.png" alt="" class="sun" />
-  </body>
+  <body></body>
 </html>
