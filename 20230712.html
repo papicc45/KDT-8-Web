@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 문자열 관련 메서드
+      let str = "Happy day~!";
+
+      // 1. 문자열 길이 확인
+      console.log(str.length);
+
+      // 2. 문자열을 모두 대,소문자로 바꾸기
+      console.log(str.toUpperCase());
+      console.log(str.toLowerCase());
+
+      // 3. index를 가져오기
+      console.log(str.indexOf("y"));
+      console.log(str.lastIndexOf("y"));
+
+      // 4. 문자열 자르기
+      console.log(str.slice(0, 4)); // 0번쨰 인덱스부터 4번째 인덱스 전까지
+      console.log(str.slice(5)); // 인자 하나만 주어지면 해당 인덱스부터 끝까지
+
+      // 5. 바꾸기
+      console.log(str.replace("p", "a")); // 제일 먼저나오는 것만 바뀜
+      console.log(str.replaceAll("a", "k")); // 전체 바뀜
+
+      // 6. 반복
+      console.log(str.repeat(3));
+
+      // 7. 문자열 자르고 리스트로 변환
+      console.log(str.split(" ")); // 빈 문자열이 인자가되면 한글자씩 자름
+
+      // 8. 좌우공백 없애기
+      console.log(str.trim()); //
+
+      /// 배열 관련 메서드
+      let days = ["M", "T", "W", "T", "F", "S", "S"];
+
+      // 1. 마지막 요소 추가/삭제
+      // 추가
+      days.push("X");
+      days.push("A", "B"); // 반환값 length 반환
+      console.log(days);
+
+      // 삭제
+      days.pop(); // string or undifined 반환
+
+      // 2. 맨 앞 요소 추가/삭제
+      days.unshift("r", "e"); // 맨앞요소 추가
+      console.log(days);
+
+      days.shift(); //맨앞요소 제거
+
+      // 3. 인덱스 가져오기
+      console.log(days.indexOf("T"));
+      console.log(days.indexOf("T", 3)); // 3번째 인덱스 이후부터 탐색
+
+      // 4. 포함 유무
+      console.log(days.includes("S"));
+
+      // 5. 반전
+      console.log(days.reverse());
+
+      // 6. 배열 연결하여 문자열로 만듬
+      console.log(days.join()); //인자값 없으면 자동으로 컴마
+      console.log(days.join("!!!"));
+
+      console.log("-------------------------------");
+      let str2 = "Holiday";
+      //메서드 체이닝
+      console.log(str2.split("").reverse().join(""));
+
+      //for문
+      let fruits = ["orange", "banana", "apple", "melon", "grape"];
+      for (let i = 0; i < fruits.length; i++) {
+        console.log(fruits[i]);
+      }
+
+      // for of문
+      for (let fruit of fruits) {
+        console.log(fruit);
+      }
+
+      //for each문    변수  인덱스   배열
+      fruits.forEach((fruit, index, arr) => {
+        console.log("fruit : ", fruit);
+        console.log("index : ", index);
+        console.log("arr : ", arr);
+      });
+
+      // filter  - 조건 만족하면 반환
+      let arr2;
+      arr2 = fruits.filter((fruit) => {
+        return fruit.length > 5;
+      });
+
+      console.log(arr2);
+
+      //표준 객체 : 자바스크립트에 내장되어 있는 객체
+
+      //Date
+      let date = new Date();
+      // (년, 월, 일, 시, 분, 초, 밀리초)
+      let date2 = new Date(2023, 7, 11);
+      console.log(date);
+      console.log(date2);
+
+      console.log(date.getFullYear()); // 년도
+      console.log(date.getMonth()); // 월
+      console.log(date.getDate()); // 일(날짜)
+      console.log(date.getDay()); //요일 index
+      console.log(date.getTime()); // 밀리초
+      console.log(date.getHours()); // 시간
+      console.log(date.getMinutes()); // 분
+      console.log(date.getSeconds()); // 초
+
+      let year = date.getFullYear();
+      let month = date.getMonth() + 1;
+      let day = date.getDate();
+
+      console.log(`${year}-${month}-${day}`);
+
+      //Math
+      console.log(Math.PI);
+
+      // min : 최소값
+      console.log(Math.min(45, 2, 1, -5));
+
+      // max : 최대값
+      console.log(Math.max(1, 99, 100, -1));
+
+      // random : 랜덤값
+      //min~max 1~10
+      console.log(Math.random() * 9 + 1);
+    </script>
+  </head>
+  <body></body>
+</html>

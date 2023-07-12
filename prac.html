@@ -6,20 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-      let sum = 0;
-      for (let i = 0; i < 100; i++) {
-        if (i % 2 == 0) {
-          sum += i;
-          continue;
-        }
+      let fruits1 = [
+        "사과",
+        "딸기",
+        "파인애플",
+        "수박",
+        "참외",
+        "오렌지",
+        "자두",
+        "망고",
+      ];
+      let fruits2 = ["수박", "사과", "참외", "오렌지", "파인애플", "망고"];
 
-        if (i % 3 == 0) {
-          sum += i;
-          continue;
+      let same = [];
+      let diff = [];
+
+      for (let f1 of fruits1) {
+        for (let f2 of fruits2) {
+          if (f1 == f2) {
+            same.push(f1);
+          } else {
+          }
         }
       }
 
-      console.log(sum);
+      for (let f1 of fruits1) {
+        if (!same.includes(f1)) {
+          diff.push(f1);
+        }
+      }
+      console.log(same);
+      console.log(diff);
     </script>
   </head>
 
