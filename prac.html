@@ -6,39 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-      let fruits1 = [
-        "사과",
-        "딸기",
-        "파인애플",
-        "수박",
-        "참외",
-        "오렌지",
-        "자두",
-        "망고",
-      ];
-      let fruits2 = ["수박", "사과", "참외", "오렌지", "파인애플", "망고"];
+      function calculate() {
+        let val1 = Number(document.getElementById("val1").value);
+        let val2 = Number(document.getElementById("val2").value);
+        let op = document.getElementById("operator").value;
 
-      let same = [];
-      let diff = [];
+        console.log(val1);
+        console.log(val2);
+        console.log(op);
 
-      for (let f1 of fruits1) {
-        for (let f2 of fruits2) {
-          if (f1 == f2) {
-            same.push(f1);
-          } else {
-          }
+        let result = document.getElementById("result");
+        switch (op) {
+          case "+":
+            result.value = val1 + val2;
+            break;
+          case "-":
+            result.value = val1 - val2;
+            break;
+          case "*":
+            result.value = val1 * val2;
+            break;
+          case "/":
+            result.value = val1 / val2;
+            break;
         }
       }
 
-      for (let f1 of fruits1) {
-        if (!same.includes(f1)) {
-          diff.push(f1);
+      function resetVal() {
+        let input = document.getElementsByTagName("input");
+        for (let i = 0; i < input.length; i++) {
+          input[i].value = "";
         }
       }
-      console.log(same);
-      console.log(diff);
     </script>
   </head>
 
-  <body></body>
+  <body>
+    값1 : <input type="text" id="val1" />
+    <br />
+    값2 : <input type="text" id="val2" />
+    <br />
+    연산자 : <input type="text" id="operator" />
+    <br />
+    결과 : <input type="text" id="result" /> <br /><br />
+    <button onclick="calculate()">계산하기</button>
+    <button onclick="resetVal()">초기화</button>
+  </body>
 </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid white;
+        border-collapse: collapse;
+        padding: 10px;
+      }
+
+      #content {
+        width: 700px;
+      }
+    </style>
+    <script>
+      let count = 1;
+      function writeBoard() {
+        let writer = document.getElementById("writer").value;
+        let content = document.getElementById("content").value;
+
+        let date = new Date();
+        let year = date.getFullYear();
+        let month = date.getMonth() + 1;
+        let day = date.getDay();
+        let hour = date.getHours();
+        let minute = date.getMinutes();
+
+        let tr = document.createElement("tr");
+        let td1 = document.createElement("td");
+        let td2 = document.createElement("td");
+        let td3 = document.createElement("td");
+        let td4 = document.createElement("td");
+
+        let table = document.getElementById("table");
+        td1.innerText = count++;
+        td2.innerText = writer;
+        td3.innerText = content;
+        td4.innerText =
+          year + "-" + month + "-" + day + " " + hour + ":" + minute;
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        tr.appendChild(td4);
+        table.appendChild(tr);
+      }
+    </script>
+  </head>
+  <body>
+    방명록입니다.
+    <br />
+    <br />
+    <div class="container">
+      작성자 : <input type="text" id="writer" />
+      <br />
+      내용 : <input type="text" id="content" />
+      <br />
+    </div>
+    <br />
+    <button onclick="writeBoard()">작성</button>
+    <br /><br />
+    <table id="table">
+      <tr>
+        <th>번호</th>
+        <th>작성자</th>
+        <th>내용</th>
+        <th>작성일</th>
+      </tr>
+    </table>
+  </body>
+</html>

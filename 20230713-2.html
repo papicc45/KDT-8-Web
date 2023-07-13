@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+
+      #green {
+        background-color: yellowgreen;
+      }
+
+      #red {
+        background-color: red;
+      }
+
+      .container {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="green">1</div>
+      <div class="box" id="red">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+    </div>
+    <input type="text" name="userName" />
+
+    <div id="abc">
+      Text
+      <div>div text</div>
+      <div>div text</div>
+    </div>
+  </body>
+  <script>
+    // 1. getElementById : id 속성값으로 가져옴
+    let dom1 = document.getElementById("green");
+    console.log(dom1);
+
+    // 2. getElementsByClassName : class 속성값으로 가져옴
+    let dom2 = document.getElementsByClassName("box");
+    console.log(dom2);
+
+    for (let i = 0; i < dom2.length; i++) {
+      console.log(dom2[i]);
+    }
+
+    // 3. getElementsByTagName : 태그 기준으로 가져옴
+    let dom3 = document.getElementsByTagName("div");
+    console.log(dom3);
+
+    // 4. getElementsByName : name 속성값 기준으로 가져옴
+    // NodeList
+    let dom4 = document.getElementsByName("userName");
+    console.log(dom4);
+
+    // 5. querySelector : css선택자 이용해서 가져옴
+    let dom5 = document.querySelector("#red");
+    console.log(dom5);
+    let dom6 = document.querySelector("div"); //태그로 가져오면 맨 처음 태그 포함 자식들까지 다 가져옴
+    console.log(dom6);
+
+    // 6. querySelectorAll : 여러개 가져올 수 있음
+    let dom7 = document.querySelectorAll("div");
+    console.log(dom7);
+
+    /*
+        HTMLCollection vs NodeList
+        
+    */
+    let abc = document.getElementById("abc");
+
+    console.log("abc : ", abc);
+    console.log("abc.children : ", abc.children);
+    console.log("abc.childNodes : ", abc.childNodes);
+  </script>
+</html>
