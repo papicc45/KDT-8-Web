@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .div1 {
+        background-color: rebeccapurple;
+      }
+
+      .div2 {
+        background-color: aqua;
+      }
+      </style>
+      <script>
+        // jQuery
+        // $(선택자).함수();
+
+        function getValue() {
+            let value = $("#input").val();
+
+        }
+
+        function setValue() {
+            $("#input").val("안녕");
+        }
+
+        function changeStyle() {
+            // $().css("속성", 속성값)
+            $("div").css("border", "10px solid black");
+        }
+
+        function changeText() {
+            // $().text();
+            $("div").text("<b>jquery 사용 후 </b>");
+        }
+
+        function chnageAttribute() {
+            // $().attr("속성", "속성값");
+            $("a").attr("href", "https://google.com");
+
+        }
+
+        function changeHTML() {
+            // $().html();
+            $("div").html("<b>jquery 사용 후</b>")
+        }
+      </script>
+  </head>
+  <body>
+    <input type="text" name="" id="input" />
+    <div class="div1"></div>
+    <div class="div2"></div>
+    
+    <button onclick="setValue()">setValue</button>
+    <button onclick="getValue()">getValue</button>
+    <button onclick="changeStyle()">changeStyle</button>
+    <button onclick="changeText()">changeText</button>
+    <button onclick="chnageAttribute()">chnageAttribute/button>
+    <button onclick="changeHTML()">changeHTML</button>
+  </body>
+</html>

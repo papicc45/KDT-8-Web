@@ -5,51 +5,134 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script>
-      function calculate() {
-        let val1 = Number(document.getElementById("val1").value);
-        let val2 = Number(document.getElementById("val2").value);
-        let op = document.getElementById("operator").value;
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+      integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
+      crossorigin="anonymous"
+    ></script>
 
-        console.log(val1);
-        console.log(val2);
-        console.log(op);
-
-        let result = document.getElementById("result");
-        switch (op) {
-          case "+":
-            result.value = val1 + val2;
-            break;
-          case "-":
-            result.value = val1 - val2;
-            break;
-          case "*":
-            result.value = val1 * val2;
-            break;
-          case "/":
-            result.value = val1 / val2;
-            break;
-        }
+    <style>
+      td {
+        text-align: center;
       }
 
-      function resetVal() {
-        let input = document.getElementsByTagName("input");
-        for (let i = 0; i < input.length; i++) {
-          input[i].value = "";
-        }
+      table,
+      tr,
+      td {
+        padding: 30px;
       }
-    </script>
+
+      .sun {
+        color: red;
+      }
+
+      .sat {
+        color: blue;
+      }
+    </style>
   </head>
-
   <body>
-    값1 : <input type="text" id="val1" />
+    날짜 : <input type="text" id="date" />
     <br />
-    값2 : <input type="text" id="val2" />
+    내용 : <input type="text" id="content" />
     <br />
-    연산자 : <input type="text" id="operator" />
-    <br />
-    결과 : <input type="text" id="result" /> <br /><br />
-    <button onclick="calculate()">계산하기</button>
-    <button onclick="resetVal()">초기화</button>
+    <button onclick="writeBoard()">작성</button>
+
+    <div>
+      <table>
+        <tr>
+          <th colspan="7">2022년 7월</th>
+        </tr>
+        <tr>
+          <th class="sun">日</th>
+          <th>月</th>
+          <th>火</th>
+          <th>水</th>
+          <th>木</th>
+          <th>金</th>
+          <th class="sat">土</th>
+        </tr>
+        <tr>
+          <td class="sun"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td id="start"></td>
+          <td>1</td>
+          <td class="sat">2</td>
+        </tr>
+        <tr>
+          <td class="sun">3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+          <td class="sat">9</td>
+        </tr>
+        <tr>
+          <td class="sun">10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+          <td>15</td>
+          <td class="sat">16</td>
+        </tr>
+        <tr>
+          <td class="sun">17</td>
+          <td>18</td>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+          <td>22</td>
+          <td class="sat">23</td>
+        </tr>
+        <tr>
+          <td class="sun">24</td>
+          <td>25</td>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+          <td>29</td>
+          <td class="sat">30</td>
+        </tr>
+        <tr>
+          <td class="sun">31</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="sat"></td>
+        </tr>
+      </table>
+    </div>
   </body>
+  <script>
+    let tds = document.querySelectorAll("td");
+    for (let td of tds) {
+      $(td).click(function (e) {
+        console.log(e);
+
+        $("#date").val(e.target.innerText);
+      });
+    }
+
+    function writeBoard() {
+      let d = $("#date").val();
+      let content = $("#content").val();
+
+      for (let td of tds) {
+        if (td.innerText == d) {
+          td.innerHTML = `${d}<br>${content}`;
+        }
+      }
+    }
+  </script>
 </html>
