@@ -19,12 +19,22 @@
       //     alert("클릭");
       //   });
 
+      // on 함수 사용하지 않고 바로 쓸 수 있는 이벤트 함수
+      // click, scroll, mouseover, hover, keyup, keydown
       $("button").click(function () {
         alert("클릭");
+      });
+
+      $("input").keyup(function (e) {
+        console.log(e);
+        console.log(e.key);
+        console.log(e.keyCode);
+        console.log(e.currentTarget);
       });
     </script>
   </head>
   <body>
     <button></button>
+    <input type="text" name="" id="" />
   </body>
 </html>

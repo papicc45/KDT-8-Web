@@ -82,11 +82,13 @@
       }
       function removeNode() {
         // 요소.remove() : 선택한 요소 삭제
+        // 삭제된 요소 반환 x
         let standard = document.getElementById("li");
         standard.remove();
       }
       function removeChildNode() {
         // 요소.removeChild() : 선택한 요소의 자식요소들 삭제
+        // 삭제된 요소 반환
         let standard = document.getElementById("li");
         let ul = document.querySelector("ul");
         ul.removeChild(standard);

@@ -25,12 +25,15 @@
       let redDiv = document.getElementById("red");
 
       function getParent() {
+        // parentNode : 부모 요소
         console.log(container.parentNode);
       }
       function pSibling() {
+        // previousSibling : 앞에있는 형제(요소 이외것도 가져옴)
         console.log(redDiv.previousSibling);
       }
       function pESibling() {
+        // previousElementsSibling : 앞에있는 형제(태그만 가져옴)
         console.log(redDiv.previousElementSibling);
       }
       function nSibling() {

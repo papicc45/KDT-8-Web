@@ -6,6 +6,9 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script>
+      /*
+            추가하는 건 html요소를 문자열로 넣기 가능
+        */
       function append() {
         // append() : 마지막 자식요소에 추가
         let li = document.createElement("li");
@@ -36,8 +39,33 @@
       }
 
       function emptyElement() {
-        // empty() : 선택된 자식들을 모두 삭제
+        // empty() : 선택된 요소의 자식들을 모두 삭제
         $("ul").empty();
+      }
+
+      function findParent() {
+        // parent() : 부모 요소 하나 반환
+        console.log($(".child2").parent());
+      }
+
+      function findParents() {
+        // parents() : 부모 요소 모두 반환
+        console.log($(".child2").parents());
+      }
+
+      function findNext() {
+        // next() : 다음 형제 요소 반환
+        console.log($(".child2").next());
+      }
+
+      function findPrev() {
+        // prev() : 이전 형제 요소 반환
+        console.log($(".child2").prev());
+      }
+
+      function findChildren() {
+        // children() : 부모 요소 선택했을 때 그 자식요소들 반환
+        console.log($(".parent").children());
       }
     </script>
   </head>

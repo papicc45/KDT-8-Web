@@ -74,6 +74,25 @@
 
     /*
         HTMLCollection vs NodeList
+        children : HTMLCollection 배열
+        childNodes : NodeList 배열
+
+        1.
+        HTMLCollection : 요소 노드만 포함(태그)
+        NodeList : 요소노드(태그), text 노드 모두 포함
+
+        2.
+        HTMLCollection : 자식요소 접근할 때 인덱스, namedItem 방식으로 접근 가능
+        NodeList : 인덱스로만 접근 가능
+
+        3.
+        HTMLCollection : 동적
+        NodeList : 정적
+
+        4.
+        HTMLCollection : 실제배열 x, foreach 사용불가
+        NodeList : 실제배열 o, 랙foreach 가능
+         
         
     */
     let abc = document.getElementById("abc");
